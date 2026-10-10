@@ -1,0 +1,43 @@
+name: 建物・地域の追加の要望 / Building or area request
+description: 高層ビル・3Dモデルの追加、対応地域の拡大 / Add a building, a 3D model, or a new area
+title: "[建物 / Building] "
+labels: ["building request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        追加してほしい建物や地域を教えてください。日本国内の建物・地域に限ります(標高と地図のデータが国内のみのため)。
+        Tell us which building or area you'd like added. Only places in Japan are supported (the elevation and map data cover Japan only).
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 要望の種類 / Request type
+      options:
+        - 建物の追加 / Add a building
+        - 3Dモデルの追加(登録済みの高層ビル) / Add a 3D model (for a listed building)
+        - 対応地域の拡大 / Add an area (city)
+        - 位置・高さの修正 / Fix a position or height
+        - その他 / Other
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: 建物・地域の名前 / Name of the building or area
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: 場所(住所・地図のURL) / Location (address or map URL)
+      description: GoogleマップのURLなど / e.g. a Google Maps URL
+  - type: input
+    id: height
+    attributes:
+      label: 高さ(わかれば) / Height (if known)
+      placeholder: "例 / e.g. 248 m"
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足 / Notes
+      description: どこから見たいかなど / e.g. where you'd like to see it from

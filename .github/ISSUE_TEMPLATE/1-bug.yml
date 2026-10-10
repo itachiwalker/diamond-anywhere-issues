@@ -1,0 +1,50 @@
+name: 不具合の報告 / Bug report
+description: 動作がおかしい、計算結果が違うなど / Something doesn't work or the result looks wrong
+title: "[不具合 / Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご報告ありがとうございます。日本語・英語のどちらでも書けます。
+        Thank you for the report. You can write in Japanese or English.
+  - type: textarea
+    id: summary
+    attributes:
+      label: 何が起きたか / What happened
+      description: 起きたことと、本来どうなるはずだったか / What happened, and what you expected instead
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現の手順 / Steps to reproduce
+      description: 観測点・対象・日付など、できるだけ具体的に / Observer, target, date, etc., as specifically as possible
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: share-url
+    attributes:
+      label: シェアのURL(あれば) / Share URL (if any)
+      description: 結果の「シェア」で作ったURLがあると、同じ条件を再現できます / A URL from the result's "Share" lets us reproduce the same conditions
+  - type: input
+    id: device
+    attributes:
+      label: 端末・OS・ブラウザ / Device, OS and browser
+      placeholder: "例 / e.g. iPhone 15, iOS 18, Safari"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: アプリのバージョン / App version
+      description: 画面の一番下に表示されています(例 v0.1.0 · abc1234) / Shown at the very bottom of the page (e.g. v0.1.0 · abc1234)
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: スクリーンショット・補足 / Screenshots and notes
+      description: 画像はここに貼り付けられます / You can paste images here
